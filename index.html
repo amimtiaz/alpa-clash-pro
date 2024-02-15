@@ -13,15 +13,15 @@
 <body class="font-poppins">
     <!-- home screen -->
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center ">
-        <section class="home text-white min-h-screen flex flex-col justify-center ">
+        <section id="home-screen" class=" text-white min-h-screen flex flex-col justify-center ">
             <div class="flex flex-col items-center gap-10">
                 <h1 class="text-9xl  font-anton">ALPHABET CLASH</h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button onclick="paly()" class="btn bg-white text-black">Play Now</button>
+                <button onclick="play()" class="btn bg-white text-black">Play Now</button>
             </div>
         </section>
     
-        <section class="play-ground hidden "> 
+        <section id="play-ground" class="hidden "> 
             <div class="flex flex-col items-center gap-20 pt-20">
                 <!-- screen -->
                 <div class="artboard artboard-horizontal phone-6 border-[#010313CC] border-[20px] rounded-2xl bg-[#ffffffb3]">
@@ -101,7 +101,9 @@
             </div>
         </section>
     </main>
-    
+    <script src="script/utility.js"></script>
     <script src="script/alpha-clash.js"></script>
+  
+    
 </body>
 </html>
