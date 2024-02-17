@@ -72,35 +72,38 @@
                 <!-- keybord end -->
                 <!-- life line screen -->
                 <div class="flex justify-between w-3/4">
+                <!-- display life -->
                     <button class="btn bg-[#894189] rounded-full text-white">
                         Life
                         <img src="images/love_icon.svg" alt="">
-                        <span>1</span>
+                        <span id="current-life">5</span>
                       </button>
-    
+                      <!-- display score -->
                       <button class="btn rounded-full bg-[#360490] text-white">
                         Score
                        <img src="images/dollar_icon.svg" alt="">
-                       <span>1</span>
+                       <span id="current-score">0</span>
                       </button>
                 </div>
                 
             </div>
         </section>
     
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <section id="final-score" class=" flex justify-center items-center min-h-screen hidden">
             <div class="text-center text-white space-y-6 bg-[#ffffff33] p-4 rounded-lg">
+                <h4 class="text-3xl">Game Over!</h4>
                 <h1 class="text-8xl ">
                     <span class="font-bold ">Score:</span> 
-                    <span>14</span>
+                    <span id="">14</span>
                 </h1>
-                <button class="btn">Play again</button>
+                <button onclick="play()" class="btn">Play again</button>
                 <p>Practice will make you a pro</p>
             </div>
         </section>
     </main>
     <script src="script/utility.js"></script>
     <script src="script/alpha-clash.js"></script>
+    <script src="script/practice.js"></script>
   
     
 </body>
