@@ -10,7 +10,14 @@
 // }
 
 
+const audio = new Audio();
+
+let isGamePlayOn = false;
+
+
 function handleKeyBoardButtonPress(event) {
+
+    if(isGamePlayOn == false) return;
     const playerPressed = event.key;
     console.log("Player pressed",playerPressed);
 
@@ -28,6 +35,9 @@ function handleKeyBoardButtonPress(event) {
 
     // check matched or not
     if(playerPressed === expectedAlpabet) {
+
+        audio.src = "../audio-file/succes.mp3";
+        audio.play();
 
         const currentScore = getTextElementValueById('current-score');
         const upadtedScore = currentScore + 1;
@@ -53,6 +63,9 @@ function handleKeyBoardButtonPress(event) {
         removeBackgroundColorById(expectedAlpabet);
         continueGame();
     } else{
+
+        audio.src = "../audio-file/error.mp3";
+        audio.play();
 
         const currentLife = getTextElementValueById('current-life');
         const updateLife = currentLife - 1;
@@ -103,6 +116,8 @@ function play(){
 
     // reset score and life
     setTextElementValueById('current-life',5);
+
+    isGamePlayOn = true;
     continueGame();
 }
 
@@ -125,6 +140,8 @@ function gameOver(){
     // clear the last selected text
     const currentAlphabet = getElementTextById('current-alphabet');
     removeBackgroundColorById(currentAlphabet);
+
+    isGamePlayOn = false;
 
 }
 
